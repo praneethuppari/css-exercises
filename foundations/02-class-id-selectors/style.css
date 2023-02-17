@@ -1,0 +1,27 @@
+.odd {
+    background-color: #de96a1;
+    font-family: Verdana, "Dejavu Sans", sans-serif;
+}
+
+#second-elem {
+    color: hsl(240, 100%, 50%);
+    font-size: 36px;
+}
+
+.odd.third-elem, #fourth-elem {
+    font-size: 24px;
+}
+
+#fourth-elem {
+    background-color: rgb(144, 238, 144);
+    font-weight: bold;
+}
+
+/*
+Multiple ways to do this. 
+- Above is one way. w
+- Solution has another way where elements 3 and 4
+share a class.
+- can just add their own rules 
+* All can be applicable and used in diff. ways *
+*/
