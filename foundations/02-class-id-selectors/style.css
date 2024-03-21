@@ -8,7 +8,7 @@
     font-size: 36px;
 }
 
-.odd.third-elem, #fourth-elem {
+.third-elem {
     font-size: 24px;
 }
 
@@ -19,9 +19,7 @@
 
 /*
 Multiple ways to do this. 
-- Above is one way. w
-- Solution has another way where elements 3 and 4
-share a class.
+- use IDs sparingly
 - can just add their own rules 
 * All can be applicable and used in diff. ways *
 */
