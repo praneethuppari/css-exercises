@@ -37,7 +37,9 @@ button {
 }
 
 .content {
-  flex: 1;
+  /* ensures all the remaining vertical space is taken by the content container which is also a flex container.
+  which is why the footer stays at the bottom and the nav bar stays at the top. */
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: center;

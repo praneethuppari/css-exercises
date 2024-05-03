@@ -16,6 +16,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px;
 }
 
 input {
@@ -25,3 +26,67 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+  position: fixed; 
+  left: 0;
+  right: 0;
+}
+
+.header {
+
+  top: 0;
+  
+}
+
+.footer {
+  bottom: 0;
+  background: #eeeeee;
+}
+
+.modal {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  gap: 8px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  font-size: 15px;
+}
+
+/*
+
+The way I attempted the solution didn't take advantage of flex properties to achieve the result fully. Specifically,
+I made a div around the content and since that is a block element it took the entire width of the screen. So to center it 
+I made the height the full height of the viewport and then centered it using justify-content and align-content. This was 
+a work around.
+
+In the solution, they made content, header, and footer flex items by making body a flex container with flow direction of
+column. In addition, they had content have a flex value of 1 which means it took up all the vertical space (since it already
+spans the whole width) left. Therefore, it pushes the footer and header to bottom and top respectively. In the solution, 
+content is also a container and they're also stacked vertically which makes it easy to style the gaps between the ind. 
+components in the .content container. In my solution, I put a div around buttons so that it stacks like a block element
+since originally they are in-line elements. 
+
+I could have made the solution much more simple by utilizing the flex shorthand property and making the body a flex
+container. I left my solution as is to analyze my mistakes but also to show there are multiple ways to achieve the same
+result but there is sometimes a more efficient and sometimes better way to do something. Sometimes both are acceptable.
+However, in this case, second might be better to scale. 
+
+*/

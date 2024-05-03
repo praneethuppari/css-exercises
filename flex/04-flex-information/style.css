@@ -1,5 +1,7 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+
+  text-align: center;
 }
 
 img {
@@ -10,6 +12,19 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+
+  margin-bottom: 32px;
+}
+
+.plants {
+
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.info {
+  width: 200px;
 }
 
 /* do not edit this footer */
@@ -24,3 +39,20 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*
+
+  Text-wraps inside flex items by default. And the text is below the image because <div> is a block element.
+
+  text-align is placed inside body as all text and inline items are centered within their containers.
+
+  each info description was put inside its own div container so that they act as a single flex item that can be 
+  separated with the gap of 52 pixels.
+  The items are also centered within the container of 'plants'. This is not done by space-evenly because
+  this requires centering of these items horizontally wheras space-evenly gives equal spaces in all areas.
+
+  Also observe how all items in the HTML share the .info class because they all require the same behavior.
+  Class is useful to do this and can quickly be applied to items.
+
+
+*/

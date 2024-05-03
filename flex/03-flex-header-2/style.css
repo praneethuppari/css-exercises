@@ -12,6 +12,11 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+  /* new code */
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
 }
 
 .profile-image {
@@ -43,6 +48,33 @@ a {
   color: rebeccapurple;
 }
 
+/* new code, the divs for these are also new code in the HTML */
+.right-links, .left-links { 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
 ul {
   list-style-type: none;
+
+  /* new code */
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+  margin: 0px;
 }
+
+/*
+  my solution same as the given solution. The solution was accomplished as follows:
+
+  - Two divs were created to separate out the two component groups that need to be on each edge
+    - one div for the left side and one div for the right side
+  - the header was made into a flex container so the left-link and right-link groups were the flex items
+    - content-justify was used to separate the two items to both sides
+    - 8px padding on all sides from the header edge
+  - the left side and right side also became flex containers so that the flex items can have gaps between them
+  - the ul is a flex container as well so the list items can be separated. 
+  
+*/

@@ -20,9 +20,30 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+  display: flex;
+  padding: 16px; /* left side of the icon, space between the flex items */
+  gap: 16px; /* right side of the icon */
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  
 }
 
 .icon {
+  flex-shrink: 0;
   color: royalblue;
   font-size: 26px;
   font-weight: 700;
@@ -33,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .close-button {
@@ -67,3 +89,15 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+/*
+1. The way I approached creating space between header, text, and cont and cancel buttons was that
+I created a div around those items called content and made them flex items within it. I then 
+made the flow direction as column and used gap to make space.
+
+In the solution, they just used margins to create space. I feel either way is fine but they created more space
+between the bottom buttons and the text which I can't do with gap and have to use margin there on text which then
+I don't even need flex at that point.
+
+
+*/

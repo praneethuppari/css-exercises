@@ -39,3 +39,11 @@ ul {
   padding: 0;
   gap: 8px;
 }
+
+/* 
+Centers the logo horizontally because it will create equal space between the flex items. The center of the screen will be 
+the space between the left-links and right-links as long as the padding / margin of both links on each side remains the same.
+
+This is a much more efficient solution.
+
+*/

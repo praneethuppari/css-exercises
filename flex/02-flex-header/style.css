@@ -1,6 +1,11 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+
+  /* added code */
+  display: flex;
+  align-items: center;
+  padding: 8px;
 }
 
 .logo {
@@ -11,9 +16,30 @@
   padding: 4px 32px;
 }
 
+/* added code .left-links */
+.left-links {
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+/* added code .right-links */
+.right-links {
+
+  margin-left: auto;
+  padding-right: 10px;
+
+}
+
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+
+  /* added code */
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  gap: 8px;
+
 }
 
 a {
@@ -23,3 +49,13 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+
+/*
+My attempt at the solution has 7 more lines of code than the solution. I used auto margins to achieve the same result.
+
+I consider this to be much less efficient but makes the space an "asset" by combining into one of the flex elements. W
+We choose where it goes. That is not necessarily maybe needed here. I think official solution is better.
+
+Keeping my attempt here to see how auto margins can also be used.
+
+*/

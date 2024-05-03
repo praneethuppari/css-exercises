@@ -2,28 +2,85 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.header, .footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0px 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  text-align: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 16px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+
+  width: 300px;
+  padding: 16px;
 }
+
+ul {
+  display: flex;
+  flex-flow: column;
+  list-style-type: none;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.card-container {
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+/* 
+There are small differences with the solution and mine but they achieve the same results. 
+The major difference is how the sidebar is styled. I made the ul a flex container and then created a gap
+between the li flex items.
+
+The solution just creates a margin padding for li style which separates them. Then, as I did, put the style 
+to remove the bullet points in ul style and removes margin & padding.
+
+Again, I was trying to use flex properties based on past exercises, but reiterates that there are mul. ways to 
+do the same thing. 
+*/
